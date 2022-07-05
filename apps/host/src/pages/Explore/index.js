@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react'
 import { loadModule } from '../../utils'
 
 const module = loadModule(
-    'http://localhost:3002/remoteEntry.js',
+    process.env['EXPLORE_URL'],
     'explore',
     './App',
 )

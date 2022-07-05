@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 const { ModuleFederationPlugin } = require('webpack').container;
+const { DefinePlugin } = require('webpack');
+require('dotenv').config({ path: './.env' });
 const path = require('path');
 const deps = require("./package.json").dependencies;
 
@@ -38,6 +40,9 @@ module.exports = {
       }
     ]
   },
+  performance: {
+    maxAssetSize: 5000000
+  },
   plugins: [
     new ModuleFederationPlugin({
         name: 'home',
@@ -46,7 +51,7 @@ module.exports = {
             './App': './src/bootstrap',
         },
         remotes: {
-          lib: "lib@http://localhost:5001/remoteEntry.js",
+          lib: `lib@${process.env['LIB_URL']}`,
         },
         shared: {
           ...deps,
@@ -60,6 +65,9 @@ module.exports = {
       dirs: ['src/components', 'src/containers'],
       allowOverrides: true,
       directoryAsNamespace: true
+    }),
+    new DefinePlugin({
+      "process.env": JSON.stringify(process.env)
     }),
   ]
 };

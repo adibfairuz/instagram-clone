@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "lerna run --parallel start",
-    "build": "lerna run --parallel build"
+    "build": "lerna run --parallel build",
+    "start:prod": "lerna run --parallel start:prod"
   },
   "devDependencies": {
     "lerna": "^5.1.5"

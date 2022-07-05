@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {ModuleFederationPlugin} = require("webpack").container;
+const { DefinePlugin } = require("webpack");
+require('dotenv').config({ path: './.env' });
 const path = require("path");
 const deps = require("./package.json").dependencies;
 
@@ -44,14 +46,12 @@ module.exports = {
       }
     ],
   },
+  performance: {
+    maxAssetSize: 5000000
+  },
   plugins: [
     new ModuleFederationPlugin({
       name: "host",
-      remotes: {
-        // move to src/utils.js
-        // app1: "app1@http://localhost:3001/remoteEntry.js",
-        // app2: "app2@http://localhost:3002/remoteEntry.js",
-      },
       shared: {
         ...deps
       },
@@ -59,6 +59,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       favicon: "./public/favicon.ico"
+    }),
+    new DefinePlugin({
+      "process.env": JSON.stringify(process.env)
     }),
   ],
 };
