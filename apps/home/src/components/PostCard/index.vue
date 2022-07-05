@@ -51,7 +51,7 @@ const props = defineProps({
 const publishTimeAgo = timeAgo.format(new Date(props.publishDate))
 
 const setAltImg = (event) => { 
-    event.target.src = "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" 
+    event.target.src = "https://firebasestorage.googleapis.com/v0/b/instagram-clone-cf514.appspot.com/o/user_placeholder.png?alt=media&token=170d391c-e539-4916-89fd-73d92528b173" 
 }
 
 </script>

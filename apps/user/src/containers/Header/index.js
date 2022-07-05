@@ -6,7 +6,7 @@ const Header = () => {
         <div class="max-w-[500px] mx-auto bg-white flex justify-between items-center border-b border-b-gray-300 px-4 py-2">
             <div class="flex items-center">
                 <FontAwesomeIcon class="text-black text-base mr-2" icon="fas lock" />
-                <div class="font-semibold mr-2">adbfz</div>
+                <div class="font-semibold text-lg mr-2">adbfz</div>
                 <FontAwesomeIcon class="text-black text-base" icon="fas chevron-down" />
             </div>
             <div class="flex items-center">

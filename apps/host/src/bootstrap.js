@@ -1,13 +1,13 @@
-import App from "./App";
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import LoadingScreen from "./components/LoadingScreen";
+const App = lazy(() => import("./App"));
 
 window.host = true
 
 ReactDOM.render(
-    <BrowserRouter>
+    <Suspense fallback={<LoadingScreen />}>
         <App/>
-    </BrowserRouter>,
+    </Suspense>,
     document.getElementById("root")
 );

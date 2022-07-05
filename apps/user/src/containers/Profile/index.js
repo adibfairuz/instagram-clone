@@ -6,7 +6,7 @@ const Profile = () => {
         <div class="flex items-center mb-5">
             <div class="flex flex-col justify-center min-w-[175px]">
                 <div class="w-20 h-20 mb-1 relative">
-                    <img class="rounded-full border border-gray-300 shadow-sm" src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" alt="user image" />
+                    <img class="rounded-full border border-gray-300 shadow-sm" src="https://firebasestorage.googleapis.com/v0/b/instagram-clone-cf514.appspot.com/o/user_placeholder.png?alt=media&token=170d391c-e539-4916-89fd-73d92528b173" alt="user image" />
                 </div>
                 <div class="text-sm font-semibold">
                     Adib Fairuz
@@ -14,16 +14,16 @@ const Profile = () => {
             </div>
             <div class="flex flex-1 justify-between items-center">
                 <div class="flex flex-col items-center">
-                    <div class="font-semibold">18</div>
-                    <div class="font-normal">Posts</div>
+                    <div class="font-semibold text-lg">14</div>
+                    <div class="font-normal text-lg">Posts</div>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="font-semibold">604</div>
-                    <div class="font-normal">Followers</div>
+                    <div class="font-semibold text-lg">604</div>
+                    <div class="font-normal text-lg">Followers</div>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="font-semibold">327</div>
-                    <div class="font-normal">Following</div>
+                    <div class="font-semibold text-lg">327</div>
+                    <div class="font-normal text-lg">Following</div>
                 </div>
             </div>
         </div>
