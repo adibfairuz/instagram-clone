@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
-import LoadingScreen from "./components/LoadingScreen";
+import LoadingScreen from "./components/Loaders/LoadingScreen";
 const App = lazy(() => import("./App"));
 
 window.host = true

@@ -1,5 +1,5 @@
 import React from 'react'
-import InstagramLogo from '../../assets/images/instagram_logo_brand.png'
+import InstagramLogo from '../../../assets/images/instagram_logo_brand.png'
 
 const LoadingScreen = () => {
   return (

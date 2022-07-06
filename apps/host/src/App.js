@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import routes from "./routes";
 import BottomTabs from "./containers/BottomTabs";
 import Page from "./components/Page";
+import Spinner from "./components/Loaders/Spinner";
 import "./index.scss";
 
 const App = () => {
@@ -13,7 +14,7 @@ const App = () => {
           {
             routes.map(({ path, Element, label }) => (
               <Route key={label} path={path} element={
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<Spinner />}>
                   <Element />
                 </Suspense>
               } />
