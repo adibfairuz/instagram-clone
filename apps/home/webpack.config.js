@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 const { ModuleFederationPlugin } = require('webpack').container;
 const { DefinePlugin } = require('webpack');
-require('dotenv').config({ path: './.env' });
+require('dotenv').config({ path: '../../.env' });
 const path = require('path');
 const deps = require("./package.json").dependencies;
 
