@@ -26,9 +26,15 @@ const Grids = () => {
                     <FontAwesomeIcon class="text-black text-2xl" icon="fas users-rectangle" />
                 </div>
             </div>
-            <div class="grid grid-cols-3 gap-1">
+            <div class="flex flex-wrap">
                 {data()?.map(post => {
-                    return <img class="aspect-square object-cover w-full h-full" alt=" " src={post.image} />
+                    return (
+                        <div class="w-[33.3333%] p-[1.5px]">
+                            <div class="pb-[100%] relative">
+                                <img class="object-cover absolute top-0 left-0 w-full h-full" alt=" " src={post.image} />
+                            </div>
+                        </div>
+                    )
                 })}
             </div>
             {
