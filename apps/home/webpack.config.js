@@ -31,20 +31,20 @@ module.exports = {
         test: /\.(css|s[ac]ss)$/i,
         use: ["vue-style-loader", "css-loader", "sass-loader", "postcss-loader"],
       },
-      {
-        test: /\.(png|svg|jpe?g|gif)$/,
-        include: /images/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'images/',
-              publicPath: 'images/'
-            }
-          }
-        ]
-      }
+      // {
+      //   test: /\.(png|svg|jpe?g|gif)$/,
+      //   include: /images/,
+      //   use: [
+      //     {
+      //       loader: 'file-loader',
+      //       options: {
+      //         name: '[name].[ext]',
+      //         outputPath: 'images/',
+      //         publicPath: 'images/'
+      //       }
+      //     }
+      //   ]
+      // }
     ]
   },
   performance: {
