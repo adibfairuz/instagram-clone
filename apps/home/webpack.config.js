@@ -18,7 +18,14 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.js$/, use: 'babel-loader' },
+      {
+        test: /\.js$/,
+        loader: "babel-loader",
+        exclude: /node_modules/,
+        options: {
+          presets: ["@babel/preset-env"],
+        },
+      },
       { test: /\.vue$/, use: 'vue-loader' },
       {
         test: /\.(css|s[ac]ss)$/i,

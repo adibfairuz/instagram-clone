@@ -22,7 +22,7 @@ module.exports = {
         loader: "babel-loader",
         exclude: /node_modules/,
         options: {
-          presets: ["solid"],
+          presets: ["solid", "@babel/preset-env"],
         },
       },
       {
