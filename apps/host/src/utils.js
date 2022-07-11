@@ -1,5 +1,4 @@
 // from https://stackoverflow.com/questions/68123199/webpack-module-federation-lazy-loading-remoteentry-js#answer-72063104
-
 const loadScope = (url, scope) => {
     const element = document.createElement('script');
     const promise = new Promise((resolve, reject) => {
@@ -29,5 +28,5 @@ const loadModule = async (url, scope, module) => {
 
 export {
     loadModule,
-    loadScope,
+    loadScope
 }

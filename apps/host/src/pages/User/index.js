@@ -1,4 +1,5 @@
-import React, {useRef, useEffect} from 'react'
+import React from 'react'
+import useLoadModule from '../../hooks/useLoadModule'
 import { loadModule } from '../../utils'
 
 const module = loadModule(
@@ -8,14 +9,8 @@ const module = loadModule(
 )
 
 const User = () => {
-    const ref = useRef(null)
-    useEffect( async () => {
-        const container = await module
-        container.mount(ref.current)
-    }, [])
-    return (
-        <div ref={ref} />
-    )
+    const { Component } = useLoadModule(module)
+    return <Component />
 }
 
 export default User

@@ -3,14 +3,14 @@ import useLoadModule from '../../hooks/useLoadModule'
 import { loadModule } from '../../utils'
 
 const module = loadModule(
-    process.env['EXPLORE_URL'],
-    'explore',
+    process.env['ACTIVITY_URL'],
+    'activity',
     './App',
 )
 
-const Explore = () => {
+const Activity = () => {
     const { Component } = useLoadModule(module)
     return <Component />
 }
 
-export default Explore
+export default Activity

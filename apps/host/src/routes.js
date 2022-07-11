@@ -4,6 +4,7 @@ import { faSquarePlus, faHeart, faCircleUser } from '@fortawesome/free-regular-s
 const Home = lazy(() => import("./pages/Home"));
 const Explore = lazy(() => import("./pages/Explore"));
 const User = lazy(() => import("./pages/User"));
+const Activity = lazy(() => import("./pages/Activity"));
 
 const routes = [
     {
@@ -27,7 +28,7 @@ const routes = [
     {
       path: "/activity",
       label: "Activity",
-      Element: () => <div>Coming Soon</div>,
+      Element: Activity,
       icon: faHeart
     },
     {

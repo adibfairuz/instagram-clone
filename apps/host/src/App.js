@@ -4,7 +4,6 @@ import routes from "./routes";
 import BottomTabs from "./containers/BottomTabs";
 import Page from "./components/Page";
 import Spinner from "./components/Loaders/Spinner";
-import "./index.scss";
 
 const App = () => {
   return (
