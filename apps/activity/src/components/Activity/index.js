@@ -6,8 +6,7 @@ const Activity = ({className, type, time, postImage, profileImage, username}) =>
     <div className={`flex justify-between items-center ${className}`}>
         <div className="flex items-center text-sm">
             <RoundedImage src={profileImage} />
-            <div className="ml-3 mr-2 font-semibold lowercase">{username}</div>
-            <div>{type === 'like' ? 'liked your post.' : 'started following you.'}<span className="ml-1 text-gray-400">{time}</span></div>
+            <div className="ml-3 mr-2"><span className="font-semibold lowercase">{username}</span> {type === 'like' ? 'liked your post.' : 'started following you.'}<span className="ml-1 text-gray-400">{time}</span></div>
         </div>
         <div>
             {
