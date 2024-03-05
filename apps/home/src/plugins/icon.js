@@ -14,8 +14,8 @@ library.add([
     faBookmark
 ])
 
-const plugin = (app) => {
+const iconPlugin = (app) => {
     app.component("font-awesome-icon", FontAwesomeIcon)
 }
 
-export default plugin
+export default iconPlugin

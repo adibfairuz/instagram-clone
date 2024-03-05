@@ -3,9 +3,10 @@ import App from './App.vue';
 import registerPlugins from './plugins'
 import "./index.scss";
 
-const mount = (element) => {
+// this props from host app
+const mount = (element, props) => {
     const app = createApp(App)
-    registerPlugins(app)
+    registerPlugins(app, props)
     app.mount(element)
 }
 

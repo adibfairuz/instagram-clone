@@ -1,6 +1,7 @@
 import React from 'react'
 import useLoadModule from '../../hooks/useLoadModule'
 import { loadModule } from '../../utils'
+import { useNavigate } from 'react-router-dom'
 
 const module = loadModule(
     process.env['HOME_URL'],
@@ -9,7 +10,8 @@ const module = loadModule(
 )
 
 const Home = () => {
-    const { Component } = useLoadModule(module)
+    const navigate = useNavigate();
+    const { Component } = useLoadModule(module, { navigate })
     return <Component />
 }
 
