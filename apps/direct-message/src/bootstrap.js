@@ -2,10 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
 import App from './App';
+import { BrowserRouter } from "react-router-dom";
 
 const mount = (element) => {
     ReactDOM.render(
-        <App/>,
+        // use BrowserRouter from host when app is not standalone
+        window.host ? <App/> : (
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        ),
         element
     );
 }
