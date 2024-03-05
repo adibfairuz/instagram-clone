@@ -12,8 +12,9 @@ Then run development servers with
 
 # Micro App List
 
-- Layout (React app): [Local](http://localhost:8080/) / [Live](https://instagram-clone-mf.vercel.app/)
+- Host (React app): [Local](http://localhost:8080/) / [Live](https://instagram-clone-mf.vercel.app/)
 - Home Page (Vue app): [Local](http://localhost:3001/) / [Live](https://instagram-clone-home.vercel.app/)
+- Direct Message Page (React app): [Local](http://localhost:3005/) / [Live](https://instagram-clone-direct-message.vercel.app/)
 - Explore Page (Svelte app): [Local](http://localhost:3002/) / [Live](https://instagram-clone-explore.vercel.app/)
 - Activity Page (Preact app): [Local](http://localhost:3004/) / [Live](https://instagram-clone-activity.vercel.app/)
 - User Page (Solid app): [Local](http://localhost:3003/) / [Live](https://instagram-clone-user.vercel.app/)
