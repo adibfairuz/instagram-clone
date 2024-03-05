@@ -83,11 +83,8 @@ jspm_packages/
 # next.js build output
 .next
 
-# Lerna
-lerna-debug.log
-
 # System Files
 .DS_Store
 Thumbs.db
 
-package-lock.json
+.nx/cache

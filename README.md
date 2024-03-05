@@ -28,5 +28,5 @@ Then run development servers with
 - [Solid](https://www.solidjs.com/)
 - [Preact](https://preactjs.com/)
 - [Tailwind](https://tailwindcss.com/)
-- [Lerna](https://lerna.js.org/)
+- [Nx](https://nx.dev/)
 - [Dummy API](https://dummyapi.io/)

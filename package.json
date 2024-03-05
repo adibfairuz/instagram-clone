@@ -8,11 +8,12 @@
     ]
   },
   "scripts": {
-    "start": "lerna run --parallel start",
-    "build": "lerna run --parallel build",
-    "start:prod": "lerna run --parallel start:prod"
+    "start": "nx run-many --parallel --target=start --all --maxParallel=100",
+    "build": "nx run-many --parallel --target=build --all --maxParallel=100",
+    "start:prod": "nx run-many --parallel --target=start:prod --all --maxParallel=100"
   },
   "devDependencies": {
-    "lerna": "^5.1.5"
+    "@nx/js": "18.0.7",
+    "nx": "18.0.7"
   }
 }
