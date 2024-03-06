@@ -51,7 +51,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "host",
+      name: "shell",
       shared: {
         ...deps
       },

@@ -6,8 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 
 const mount = (element) => {
     ReactDOM.render(
-        // use BrowserRouter from host when app is not standalone
-        window.host ? <App/> : (
+        // use BrowserRouter from shell when app is not standalone
+        window.shell ? <App/> : (
             <BrowserRouter>
                 <App />
             </BrowserRouter>
@@ -16,7 +16,7 @@ const mount = (element) => {
     );
 }
 
-if (!window.host) {
+if (!window.shell) {
     mount(document.getElementById("root"));
 }
 

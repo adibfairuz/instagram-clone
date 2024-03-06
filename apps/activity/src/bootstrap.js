@@ -9,7 +9,7 @@ const mount = (element) => {
     );
 }
 
-if (!window.host) {
+if (!window.shell) {
     mount(document.getElementById("app"));
 }
 

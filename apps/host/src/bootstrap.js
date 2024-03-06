@@ -4,7 +4,7 @@ import LoadingScreen from "./components/Loaders/LoadingScreen";
 import "./index.scss";
 const App = lazy(() => import("./App"));
 
-window.host = true
+window.shell = true
 
 ReactDOM.render(
     <Suspense fallback={<LoadingScreen />}>
